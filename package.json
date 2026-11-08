@@ -14,7 +14,7 @@
     "url": "https://github.com/VasilyeuUV/bulls-and-cows/issues"
   },
   "homepage": "https://github.com/VasilyeuUV/bulls-and-cows#readme",
-  "private": "true",
+  "private": true,
   "engines": {
     "node": ">=20"
   },
