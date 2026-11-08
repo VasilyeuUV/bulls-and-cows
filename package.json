@@ -38,6 +38,8 @@
     "build": "tsc -p tsconfig.build.json",
     "lint": "eslint .",
     "format": "prettier --write .",
-    "format:check": "prettier --check ."
+    "format:check": "prettier --check .",
+    "test": "jest --watchAll=false",
+    "test:watch": "jest --watch"
   }
 }
