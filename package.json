@@ -1,0 +1,21 @@
+{
+  "name": "bulls-and-cows",
+  "version": "1.0.0",
+  "description": "RsSchool task: a game of guessing a secret number made up of unique digits",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VasilyeuUV/bulls-and-cows.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/VasilyeuUV/bulls-and-cows/issues"
+  },
+  "homepage": "https://github.com/VasilyeuUV/bulls-and-cows#readme",
+  "private": "true",
+  "engines": {
+    "node": ">=20"
+  }
+}
