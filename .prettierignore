@@ -4,3 +4,4 @@ _site/
 coverage/
 package-lock.json
 .husky/
+*.svg
