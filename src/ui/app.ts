@@ -342,6 +342,8 @@ export const createApp = (root: HTMLElement, storage: StorageLike = localStorage
   };
 
   const render = (): void => {
+    document.documentElement.lang = language;
+    document.title = t(language, 'game.title');
     container.replaceChildren(
       renderHeader(),
       el('main', { class: 'main' }, [game === null ? renderSettings() : renderGame(game)]),
