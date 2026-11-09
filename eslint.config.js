@@ -15,7 +15,7 @@ export default tseslint.config(
       globals: { ...globals.browser, ...globals.node },
     },
     rules: {
-      'no-console': 'error',
+      'no-console': ['error', { allow: ['error'] }],
       eqeqeq: ['error', 'always'],
       'prefer-const': 'error',
       'no-var': 'error',
