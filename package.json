@@ -1,0 +1,47 @@
+{
+  "name": "bulls-and-cows",
+  "version": "1.0.0",
+  "description": "RsSchool task: a game of guessing a secret number made up of unique digits",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VasilyeuUV/bulls-and-cows.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/VasilyeuUV/bulls-and-cows/issues"
+  },
+  "homepage": "https://github.com/VasilyeuUV/bulls-and-cows#readme",
+  "private": true,
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/jest": "^30.0.0",
+    "@types/node": "^24.19.2",
+    "eslint": "^10.14.0",
+    "eslint-config-prettier": "^10.1.8",
+    "globals": "^17.14.0",
+    "husky": "^9.1.7",
+    "jest": "^30.5.2",
+    "lint-staged": "^17.6.0",
+    "prettier": "^3.9.10",
+    "ts-jest": "^29.4.15",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.72.1"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "build": "tsc -p tsconfig.build.json",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "test": "jest --watchAll=false",
+    "test:watch": "jest --watch",
+    "prepare": "husky",
+    "watch": "tsc -p tsconfig.build.json --watch"
+  }
+}

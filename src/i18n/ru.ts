@@ -1,0 +1,32 @@
+import type { TranslationKey } from './en.js';
+
+/** Русские строки интерфейса. */
+export const ru: Record<TranslationKey, string> = {
+  'settings.title': 'Настройки',
+  'settings.length': 'Длина секрета',
+  'settings.base': 'Система счисления',
+  'settings.start': 'Начать игру',
+  'settings.possible': 'Возможных секретов: {count}',
+  'settings.binaryHint': 'Двоичная система поддерживает только длину 2',
+  'game.title': 'Быки и коровы',
+  'game.attempts': 'Попытки',
+  'game.time': 'Время',
+  'game.guessPlaceholder': 'Введите {length} цифр',
+  'game.submit': 'Проверить',
+  'game.newGame': 'Новая игра',
+  'game.historyEmpty': 'Попыток пока нет',
+  'game.bulls': 'Быки',
+  'game.cows': 'Коровы',
+  'game.secret': 'Секрет',
+  'game.win': 'Вы угадали за {attempts} попыток, время {time}!',
+  'game.duplicate': 'Эта попытка уже была',
+  'game.invalid': 'Введите корректную попытку',
+  'game.exit': 'Выйти из игры',
+  'records.title': 'Рекорды',
+  'records.empty': 'Рекордов пока нет',
+  'records.attempts': 'Попытки',
+  'records.time': 'Время',
+  'records.date': 'Дата',
+  'records.settings': 'Настройки',
+  'common.language': 'Язык',
+};
