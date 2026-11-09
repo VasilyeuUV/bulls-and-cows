@@ -2,7 +2,7 @@
 export type Base = 2 | 8 | 10 | 16;
 
 /** Алфавиты цифр для каждой системы; hex — в нижнем регистре. */
-const DIGITS: Record<Base, string> = {
+export const DIGITS: Record<Base, string> = {
   2: '01',
   8: '01234567',
   10: '0123456789',
