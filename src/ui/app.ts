@@ -11,7 +11,7 @@ import type { StorageLike } from '../core/storage.js';
 import { isValidGuess } from '../core/validate.js';
 import { loadLanguage, saveLanguage, t } from '../i18n/index.js';
 import type { Language } from '../i18n/index.js';
-import { el } from './dom.js';
+import { el, icon } from './dom.js';
 
 /** Длины секрета, доступные в настройках. */
 const LENGTHS = [2, 3, 4, 5, 6] as const;
@@ -102,9 +102,32 @@ export const createApp = (root: HTMLElement, storage: StorageLike = localStorage
       render();
     });
 
+    const exit = el(
+      'button',
+      {
+        class: 'icon-button',
+        type: 'button',
+        'aria-label': t(language, 'game.exit'),
+        title: t(language, 'game.exit'),
+      },
+      [icon(['M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4', 'M16 17l5-5-5-5', 'M21 12H9'])],
+    );
+
+    exit.addEventListener('click', () => {
+      stopTimer();
+      game = null;
+      message = null;
+      render();
+    });
+
+    const controls = el('div', { class: 'header-controls' }, [
+      toggle,
+      game !== null && game.finishedAt === null ? exit : null,
+    ]);
+
     return el('header', { class: 'header' }, [
       el('h1', { class: 'title' }, [t(language, 'game.title')]),
-      toggle,
+      controls,
     ]);
   };
 

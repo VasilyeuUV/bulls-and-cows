@@ -25,6 +25,7 @@ export const en = {
   'game.win': 'You won in {attempts} attempts in {time}!',
   'game.duplicate': 'This guess was already tried',
   'game.invalid': 'Enter a valid guess',
+  'game.exit': 'Exit game',
   'records.title': 'Records',
   'records.empty': 'No records yet',
   'records.attempts': 'Attempts',

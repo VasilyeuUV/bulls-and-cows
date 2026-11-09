@@ -21,6 +21,7 @@ export const ru: Record<TranslationKey, string> = {
   'game.win': 'Вы угадали за {attempts} попыток, время {time}!',
   'game.duplicate': 'Эта попытка уже была',
   'game.invalid': 'Введите корректную попытку',
+  'game.exit': 'Выйти из игры',
   'records.title': 'Рекорды',
   'records.empty': 'Рекордов пока нет',
   'records.attempts': 'Попытки',

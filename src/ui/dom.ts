@@ -1,6 +1,9 @@
 /** Дочерний узел, который можно передать в `el`. */
 export type Child = Node | string;
 
+/** Пространство имён SVG. */
+const SVG_NS = 'http://www.w3.org/2000/svg';
+
 /**
  * Создаёт DOM-элемент.
  *
@@ -30,4 +33,37 @@ export const el = <K extends keyof HTMLElementTagNameMap>(
   node.append(...children.filter((child): child is Child => child !== null));
 
   return node;
+};
+
+/**
+ * Создаёт SVG-иконку из набора контуров.
+ *
+ * Иконка декоративная: `aria-hidden` скрывает её от скринридеров, а смысл
+ * передаётся через `aria-label` кнопки.
+ *
+ * @param paths - значения атрибута `d` для каждого контура
+ * @param size - сторона иконки в пикселях
+ * @returns готовый SVG-элемент
+ */
+export const icon = (paths: readonly string[], size = 20): SVGElement => {
+  const svg = document.createElementNS(SVG_NS, 'svg');
+
+  svg.setAttribute('viewBox', '0 0 24 24');
+  svg.setAttribute('width', String(size));
+  svg.setAttribute('height', String(size));
+  svg.setAttribute('fill', 'none');
+  svg.setAttribute('stroke', 'currentColor');
+  svg.setAttribute('stroke-width', '2');
+  svg.setAttribute('stroke-linecap', 'round');
+  svg.setAttribute('stroke-linejoin', 'round');
+  svg.setAttribute('aria-hidden', 'true');
+
+  paths.forEach((d) => {
+    const path = document.createElementNS(SVG_NS, 'path');
+
+    path.setAttribute('d', d);
+    svg.append(path);
+  });
+
+  return svg;
 };
